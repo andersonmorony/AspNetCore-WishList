@@ -20,7 +20,7 @@ namespace WishList
         {
             services.AddMvc();
 
-            services.AddDbContext<ApplicationDbContext>(options =>  options.UseInMemoryDatabase("WhiteList"));
+            services.AddDbContext<ApplicationDbContext>(options => { options.UseInMemoryDatabase("WishList"); });
 
         }
 

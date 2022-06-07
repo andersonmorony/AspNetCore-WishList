@@ -20,10 +20,7 @@ namespace WishList
         {
             services.AddMvc();
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-            {
-                options.UseInMemoryDatabase("WhiteList");
-            });
+            services.AddDbContext<ApplicationDbContext>(options =>  options.UseInMemoryDatabase("WhiteList"));
 
         }
 
@@ -39,7 +36,6 @@ namespace WishList
                 {
                     app.UseExceptionHandler("/Home/Error");
                 }
-
                 app.UseRouting();
 
                 app.UseEndpoints(endpoints =>
